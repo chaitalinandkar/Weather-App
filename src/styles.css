@@ -1,0 +1,245 @@
+body.main {
+  background-image: url("../images/page-background.jpg");
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.weather-background{
+  display: flex;
+  flex-direction: row;
+  background-image: url("../images/background.jpg");
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 950px;
+  height: 100%;
+  display: block;
+  margin: 70px auto;
+  border-radius: 10px;
+  opacity: 1;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+div.heading {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 20px;
+}
+
+.search-bar {
+  opacity: 0.7;
+  width: 400px;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-right: 20px;
+  border-radius: 30px;
+  text-align: left;
+  border: none;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.search-button {
+  padding: 10px 22px;
+  font-size: 20px;
+  border-radius: 30px;
+  background-color: rgb(70, 72, 76);
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  transition: all 0.15s ease-in-out;
+  margin-right: 20px;
+}
+
+.search-button:hover {
+  background-color: rgb(150, 150, 150);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.current-location {
+  padding: 10px 22px;
+  font-size: 20px;
+  border-radius: 30px;
+  background-color: rgb(70, 72, 76);
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  transition: all 0.15s ease-in-out;
+}
+
+.current-location:hover {
+  background-color: rgb(150, 150, 150);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.middle-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  vertical-align: middle;
+}
+
+#weather-container-left{
+  margin-left: 30px;
+}
+.city {
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: 700;
+  border: none;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  background: linear-gradient(to top, #8a99b5 0%, #d2d8e3 100%);
+  transition: all 0.15s ease-in-out;
+}
+
+div.day-time,
+div.date {
+  font-size: 25px;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+#weather-container-middle{
+  margin-left: 70px;
+}
+.weather-icon {
+  font-size: 70px;
+  opacity: 0.8;
+}
+
+.weather-description {
+  font-weight: 700;
+  opacity: 0.8;
+  font-size: 40px;
+}
+
+.temperature{
+  display: flex;
+  flex-direction: row;
+  vertical-align: top;
+  justify-content: center;
+}
+
+.temp-number {
+  font-size: 55px;
+  font-weight: 500;
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+.temp-unit{
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.celsius,
+.fahrenheit {
+  text-decoration: none;
+  color: black;
+  opacity: 0.6;
+  transition: all 0.15s ease-in-out;
+}
+
+.celsius:hover,
+.fahrenheit:hover {
+  color: black;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+#weather-container-right {
+  text-align: center;
+  /* position: relative; */
+  float: right;
+  font-weight: 500;
+  line-height: 40px;
+  opacity: 0.7;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.para-description{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  opacity: 0.7;
+}
+
+.next-5-days-container {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0;
+  
+}
+
+.col-sm {
+  border: 0.5px solid gray;
+  border-radius: 10px;
+  background: linear-gradient(to top, #bec5d1 0%, #e7e9ec 100%);
+  border: none;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition: all 0.15s ease-in-out;
+  width: 100%;
+  height:100%;
+  margin: 15px;
+  
+}
+
+.col-sm:hover {
+  background: linear-gradient(to top, #a8a5a5 0%, #e1e4e4 100%);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+#space-left{
+  margin-left: 30px;
+}
+
+#space-right {
+  margin-right: 30px;
+}
+.day {
+  font-size: 22px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.icon {
+  font-size: 50px;
+}
+
+.details {
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+.temperature-5Days{
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.open-source-code{
+  padding: 10px 30px 20px 30px;
+  text-decoration: none;
+}
