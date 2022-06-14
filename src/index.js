@@ -73,8 +73,8 @@ function displaySearchedCityDate(response) {
   currentCity.innerHTML = response.data.name;
 
   let temperature = document.querySelector("#display-temperature");
-  let temp = Math.round(response.data.main.temp);
-  temperature.innerHTML = temp;
+  celciusTemperature = Math.round(response.data.main.temp);
+  temperature.innerHTML = celciusTemperature;
 
   let description = document.querySelector(".weather-description");
   description.innerHTML = response.data.weather[0].description;
@@ -124,27 +124,26 @@ function search(event) {
 let searchButton = document.querySelector("button");
 searchButton.addEventListener("click", search);
 
+let celciusTemperature = null;
 //getting temperature into Fahrenheit  
 function changeToFahrenheit(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#display-temperature");
-  console.log(temperature.innerHTML);
-  //temperature.innerHTML = ((temperature.innerHTML * 9) / 5) + 32;
-  temperature.innerHTML = `25`;
+  let temperatureElement = document.querySelector("#display-temperature");
+  console.log(celciusTemperature);
+  temperatureElement.innerHTML = Math.round(((celciusTemperature * 9) / 5) + 32);
 }
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", changeToFahrenheit);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", changeToFahrenheit);
+
 
 //getting temperature into Celcius  
 function changeToCelcius(event) {
   event.preventDefault();
   let temperature = document.querySelector("#display-temperature");
   console.log(temperature.innerHTML);
-  //temperature.innerHTML = ((temperature.innerHTML - 32) * 5 ) / 9;
-  temperature.innerHTML = `77`;
+  temperature.innerHTML = celciusTemperature;
 }
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", changeToCelcius);
-
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", changeToCelcius);
