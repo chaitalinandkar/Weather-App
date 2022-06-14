@@ -31,8 +31,6 @@ let displayDate = document.querySelector("#current-date");
 displayDate.innerHTML = `${date}, `;
 let displayYear = document.querySelector("#current-year");
 displayYear.innerHTML = `${year}`;
-// let displayDateFormat = document.querySelector("#display-date");
-// displayDateFormat.innerHTML = `${month} ${date}, ${year}`;
 
 //Getting current DAY
 let days = [
@@ -87,12 +85,17 @@ function displaySearchedCityDate(response) {
   let wind = document.querySelector(".wind");
   let windSpeed = Math.round(response.data.wind.speed);
   wind.innerHTML = `Wind: ${windSpeed}mph`;
+
+  let iconElement = document.querySelector("#icon-element");
+  iconElement.setAttribute("src",
+ `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+  
 }
 
 //current button using Geolocation
 function showCurrentPosition(position) {
-  // console.log(position.coords.latitude);
-  // console.log(position.coords.longitude);
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiKey = "f7dffd4359849bb28c77fa4fe304c30f";

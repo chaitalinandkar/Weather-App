@@ -1,4 +1,4 @@
-body.main {
+.main{
   background-image: url("../images/page-background.jpg");
   background-position: cover;
   background-size: cover;
@@ -123,6 +123,7 @@ div.date {
   font-weight: 700;
   opacity: 0.8;
   font-size: 40px;
+  text-transform: capitalize;
 }
 
 .temperature{
@@ -240,6 +241,7 @@ div.date {
 }
 
 .open-source-code{
-  padding: 10px 30px 20px 30px;
+  margin-left: 30px;
   text-decoration: none;
+  
 }
